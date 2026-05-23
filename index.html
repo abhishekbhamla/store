@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>deepanshu General Store</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#222;
+    }
+
+    /* HEADER */
+    header{
+      background:#0f172a;
+      color:white;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#38bdf8;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      height:90vh;
+      background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      background:#38bdf8;
+      color:white;
+      padding:14px 28px;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0284c7;
+    }
+
+    /* PRODUCTS */
+    .products{
+      padding:70px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:50px;
+      color:#0f172a;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+    }
+
+    .price{
+      color:#0284c7;
+      font-size:22px;
+      font-weight:bold;
+      margin:10px 0;
+    }
+
+    /* ABOUT */
+    .about{
+      background:white;
+      padding:70px 8%;
+      text-align:center;
+    }
+
+    .about p{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.8;
+      color:#555;
+    }
+
+    /* CONTACT */
+    .contact{
+      padding:70px 8%;
+      background:#e2e8f0;
+      text-align:center;
+    }
+
+    .contact h2{
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      margin:10px 0;
+      font-size:18px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      .hero-content h1{
+        font-size:40px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">FreshMart</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Daily Needs, One Store</h1>
+      <p>Fresh groceries, household items & daily essentials at affordable prices.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <h2 class="section-title">Popular Products</h2>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>Fresh Fruits</h3>
+          <p>Healthy and fresh seasonal fruits.</p>
+          <div class="price">₹120/kg</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573246123716-6b1782bfc499?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>Vegetables</h3>
+          <p>Farm fresh green vegetables.</p>
+          <div class="price">₹80/kg</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images.jpeg">
+        <div class="card-content">
+          <h3>Groceries</h3>
+          <p>Rice, pulses, flour and more.</p>
+          <div class="price">Best Prices</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>Daily Essentials</h3>
+          <p>Soap, shampoo, snacks & more.</p>
+          <div class="price">Top Deals</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+
+    <p>
+      FreshMart General Store provides quality groceries and household products
+      for your daily needs. We focus on fresh products, affordable prices,
+      and excellent customer service. Visit our store and experience
+      hassle-free shopping.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <p><strong>Address:</strong> Main Market, Haryana, India</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Email:</strong> freshmart@gmail.com</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 FreshMart General Store | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
